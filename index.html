@@ -2,81 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Mi PWA</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi PWA</title>
 
-<body>
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-12 col-sm-2">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, quasi?</p>
-      </div>
-      <div class="col-12 col-sm-8">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <button type="button" class="btn btn-secondary" onclick="mensaje()"> SweetAlert2 </button>
-      </div>
-      <div class="col-12 col-sm-2">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, est.</p>
-      </div>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container p-3">
+    <div class="row">
+        <div class="col-12">
+            <img src="img/main.jpg" alt="Vías del tren" class="img-fluid">
+
+            <h1>Bienvenido</h1>
+            <hr>
+
+            <p>
+                Las PWAs son el siguiente paso a las páginas y aplicaciones web.
+            </p>
+            <p>
+                Cargan sumamente rápido y no necesitan conexión a internet para trabajar
+            </p>
+        </div>
     </div>
-    <div class="row mt-3">
-      <div class="col-12 col-sm-6">
-        <div class="alert alert-primary" role="alert">
-          A simple primary alert—check it out!
-        </div>
-        <div class="alert alert-secondary" role="alert">
-          A simple secondary alert—check it out!
-        </div>
-        <div class="alert alert-success" role="alert">
-          A simple success alert—check it out!
-        </div>
-        <div class="alert alert-danger" role="alert">
-          A simple danger alert—check it out!
-        </div>
-      </div>
-      <div class="col-12 col-sm-6">
 
-        <div class="alert alert-warning" role="alert">
-          A simple warning alert—check it out!
+    <div class="row">
+        <div class="col-6 col-sm-12">
+            <button id="btn1" type="button" class="btn btn-primary" onclick="mensaje1();">mensaje 1</button>
         </div>
-        <div class="alert alert-info" role="alert">
-          A simple info alert—check it out!
+
+        <div class="col-6 col-sm-12 mt-2">
+            <button id="btn2" type="button" class="btn btn-primary" onclick="mensaje2();">mensaje 2</button>
         </div>
-        <div class="alert alert-light" role="alert">
-          A simple light alert—check it out!
-        </div>
-        <div class="alert alert-dark" role="alert">
-          A simple dark alert—check it out!
-        </div>
-      </div>
     </div>
-  </div>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <script src="js/app.js"></script>
 
 
+    <script>
 
+        function mensaje1() {
+            Swal.fire(
+                'Mensaje Simple 01',
+                'Hola !!!, Bienvenido',
+                'success'
+            )
+        };
 
-  <script src="js/sweetalert2.all.min.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-
-  <script>
-    'use strict';
-
-    function mensaje() {
-      Swal.fire(
-        'Mensaje Simple',
-        'Hola !!!, Bienvenido',
-        'success'
-      )
-    };
-
-
-  </script>
+        function mensaje2() {
+            Swal.fire(
+                'Mensaje Simple 02',
+                'Hola !!!, Error',
+                'error'
+            )
+        };
+    </script>
 </body>
 
 </html>
