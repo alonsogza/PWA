@@ -108,7 +108,10 @@ self.addEventListener('fetch', event => {
         .then( resp => {
             // Esta linea es un operador ternario, algo asi IFF( compartivo, verdadero,  falso)
             return resp.ok ? resp: fetch('img/main.jpg');
+<<<<<<< HEAD
             
+=======
+>>>>>>> 6d6a0348713958a010277713e5e324e339d2f404
         });
 
     event.respondWith(resp)
