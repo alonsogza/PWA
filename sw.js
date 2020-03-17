@@ -4,6 +4,7 @@
 // self.addEventListener('fetch', event => {
 //     console.log()
 // })
+/////////////////////////////////////////////////////////////////////
 
 // < Clase 36 - Service Worker / Fetch Event >
 // self.addEventListener("fetch", event => {
@@ -17,6 +18,7 @@
 //       event.respondWith(fetch( event.request))
 //   };
 // });
+/////////////////////////////////////////////////////////////////////
 
 // < Clase 37 >
 //   self.addEventListener("fetch", event => {  
@@ -34,6 +36,7 @@
 //       // http://127.0.0.1:5500/img/main.jpg
 //   }
 // });
+/////////////////////////////////////////////////////////////////////
 
 // // < Clase 38 - Modificacion del SW / Fetch Event >
 // // Ejercicio para modificar petición del style.CSS
@@ -57,7 +60,7 @@
 //     event.respondWith(respuesta);
 //   }
 // });
-
+/////////////////////////////////////////////////////////////////////
 
 // // < Clase 39 - Interceptar y Modificacion Peticiones >
 // // Ejercicio encontrar la peticion de main.jpg para cambiarla a main-patas-arriba.jpg
@@ -75,6 +78,7 @@
 //     // };
 //     // PD: Fernando Herrera recomiendo que es más limpio la solucion que escribi.
 // });
+/////////////////////////////////////////////////////////////////////
 
 // // < Clase 40 - Manejo de errores en el Fetch Event >
 self.addEventListener('fetch', event => { 
@@ -104,7 +108,7 @@ self.addEventListener('fetch', event => {
         .then( resp => {
             // Esta linea es un operador ternario, algo asi IFF( compartivo, verdadero,  falso)
             return resp.ok ? resp: fetch('img/main.jpg');
-
+            
         });
 
     event.respondWith(resp)
